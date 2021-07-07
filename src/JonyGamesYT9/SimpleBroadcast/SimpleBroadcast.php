@@ -23,8 +23,8 @@ class SimpleBroadcast extends \pocketmine\plugin\PluginBase
   */
   public function onLoad(): void
   {
-    YamlProvider::init();
     SimpleBroadcast::$instance = $this;
+    YamlProvider::init();
   }
 
   /**
