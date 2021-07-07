@@ -1,0 +1,20 @@
+---
+# ========================================
+config-version: 1 # ¡Don't Change This!
+# ========================================
+# Variables:
+# {online} = Get Players in Server 
+# ========================================
+prefix: "§a[Server]" # Default: "§a[Server]"
+# ========================================
+message_interval: 30  # Default: 30
+# ========================================
+# To add more messages add - and "message"
+messages:
+- "§7Playing now in server: §6{online}"
+- "§7Suscribe to §6YoSoyJony §7:D"
+- "§7Follow on §6https://github.com/JonyGamesYT9"
+- "§7Buy a rank in: §6shop.latammc.cf"
+- "§7Thanks for playing in: §6Latam.cf:19132"
+# ========================================
+...
