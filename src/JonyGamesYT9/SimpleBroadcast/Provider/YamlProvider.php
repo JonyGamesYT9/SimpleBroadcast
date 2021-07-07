@@ -28,7 +28,7 @@ class YamlProvider
   {
     SimpleBroadcast::getInstance()->saveResource("Config.yml");
     YamlProvider::$instance = new YamlProvider();
-    $this->config = new Config(SimpleBroadcast::getInstance()->getDataFolder() . "Config.yml", Config::YAML);
+    YamlProvider::getInstance()->config = new Config(SimpleBroadcast::getInstance()->getDataFolder() . "Config.yml", Config::YAML);
   }
 
   /**
@@ -36,7 +36,7 @@ class YamlProvider
   */
   public function getConfigVersion(): int
   {
-    return $this->config->get("config-version");
+    return YamlProvider::getInstance()->config->get("config-version");
   }
 
   /**
@@ -44,7 +44,7 @@ class YamlProvider
   */
   public function getMessageInterval(): int
   {
-    return $this->config->get("message_interval");
+    return YamlProvider::getInstance()->config->get("message_interval");
   }
 
   /**
@@ -52,7 +52,7 @@ class YamlProvider
   */
   public function getPrefix(): string
   {
-    return $this->config->get("prefix");
+    return YamlProvider::getInstance()->config->get("prefix");
   }
 
   /**
@@ -60,10 +60,10 @@ class YamlProvider
   */
   public function getMessages(): array
   {
-    foreach ($this->config->get("messages") as $messages) {
-      $this->messages[] = $messages;
+    foreach (YamlProvider::getInstance()->config->get("messages") as $messages) {
+      YamlProvider::getInstance()->messages[] = $messages;
     }
-    return $this->messages;
+    return YamlProvider::getInstance()->messages;
   }
 
   /**
