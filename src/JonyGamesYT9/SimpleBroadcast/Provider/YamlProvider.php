@@ -63,7 +63,7 @@ class YamlProvider
     foreach (YamlProvider::getInstance()->config->get("messages") as $messages) {
       YamlProvider::getInstance()->messages[] = $messages;
     }
-    return YamlProvider::getInstance()->messages[];
+    return YamlProvider::getInstance()->messages;
   }
 
   /**
