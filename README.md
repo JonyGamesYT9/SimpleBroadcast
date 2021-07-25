@@ -10,6 +10,9 @@
 <li>PocketMine-MP 3.0.0 (Only)</li>
 </ul>
 
+<h3>Icon:</h3>
+<p>Icon Credits: https://www.flaticon.com/free-icon/broadcast_3315547?term=broadcast&page=1&position=9&page=1&position=9&related_id=3315547&origin=style</p>
+
 ## Project information:
 | Version | Pocketmine API | PHP | Status |
 |---|---|---|---|
