@@ -24,9 +24,9 @@ class BroadcastScheduler extends \pocketmine\scheduler\Task {
     $random = $messages[array_rand($messages)];
     $title = YamlProvider::getInstance()->getPrefix();
     $online = count(Server::getInstance()->getOnlinePlayers());
-    $selected_message = str_replace(["&", "{online}"], ["§", $online], $random);
     foreach (Server::getInstance()->getOnlinePlayers() as $players) {
       if ($players instanceof Player) {
+        $selected_message = str_replace(["&", "{online}", "{name}"], ["§", $online, $players->getName()], $random);
         $players->sendMessage(str_replace(["&"], ["§"], $title) . " " . $selected_message);
       }
     }
