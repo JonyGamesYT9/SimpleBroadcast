@@ -2,9 +2,17 @@
 name: SimpleBroadcast
 main: JonyGamesYT9\SimpleBroadcast\SimpleBroadcast
 api: [3.0.0]
-version: 1.0.0
+version: 2.0.0
 author: JonyGamesYT9 
 description: Simple broadcast system
 website: https://github.com/JonyGamesYT9
 load: STARTUP
+
+permissions:
+ broadcast.command.help:
+   description: "Get full access to the help command."
+   default: op 
+ broadcast.command.send:
+   description: "Send a unique message to all users."
+   default: op
 ...
