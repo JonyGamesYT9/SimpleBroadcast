@@ -69,7 +69,7 @@ class BroadcastCommand extends Base implements PluginIdentifiableCommand {
             unset($args[0]);
             $title = YamlProvider::getInstance()->getPrefix();
             $message = str_replace(["&"], ["§"], implode(" ", $args));
-            $players->sendMessage(str_replace(["&"], ["§"], $title) . " " . $message);
+            $players->sendMessage(str_replace(["&"], ["§"], $title) . "§r " . $message);
           }
         }
         break;
