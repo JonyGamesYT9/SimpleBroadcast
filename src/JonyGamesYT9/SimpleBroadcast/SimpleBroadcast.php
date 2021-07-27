@@ -6,6 +6,7 @@ use JonyGamesYT9\SimpleBroadcast\Commands\BroadcastCommand;
 use JonyGamesYT9\SimpleBroadcast\Provider\YamlProvider;
 use JonyGamesYT9\SimpleBroadcast\Scheduler\BroadcastScheduler;
 use pocketmine\Server;
+use pocketmine\Player;
 use onebone\economyapi\EconomyAPI;
 use function is_numeric;
 
