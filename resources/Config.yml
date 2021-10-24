@@ -25,4 +25,14 @@ messages:
 - "§7Buy a rank in: §6shop.latammc.cf"
 - "§7Thanks for playing in: §6Latam.cf:19132"
 # ========================================
+# Example usage:
+# per-world-messages:
+#  world_name:
+#  - "Hello players in world :)"
+per-world-messages:
+ world:
+ - "Hi"
+ world2:
+ - "Hello"
+# ========================================
 ...
