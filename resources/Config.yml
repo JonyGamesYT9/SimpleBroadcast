@@ -25,10 +25,4 @@ messages:
 - "§7Buy a rank in: §6shop.latammc.cf"
 - "§7Thanks for playing in: §6Latam.cf:19132"
 # ========================================
-per-world-messages:
- "world":
- - "Hi"
- "world2":
- - "Hello"
-# ========================================
 ...
