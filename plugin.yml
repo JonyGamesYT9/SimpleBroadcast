@@ -2,7 +2,7 @@
 name: SimpleBroadcast
 main: JonyGamesYT9\SimpleBroadcast\SimpleBroadcast
 api: [3.0.0]
-version: 2.0.0
+version: 4.0.0
 author: JonyGamesYT9 
 description: Simple broadcast system
 website: https://github.com/JonyGamesYT9
