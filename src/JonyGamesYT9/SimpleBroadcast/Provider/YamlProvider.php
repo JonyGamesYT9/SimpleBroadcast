@@ -18,7 +18,7 @@ class YamlProvider
   /** @var Config $config */
   private Config $config;
 
-  /** @var array|string $messages */
+  /** @var array $messages */
   private array $messages = [];
 
   /**
