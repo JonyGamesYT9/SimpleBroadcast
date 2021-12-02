@@ -47,6 +47,9 @@ class SimpleBroadcast extends \pocketmine\plugin\PluginBase
         Server::getInstance()->getPluginManager()->disablePlugin($this);
       } else
       {
+        foreach (YamlProvider::getInstance()->config->get("messages") as $messages) {
+      YamlProvider::getInstance()->messages[] = $messages;
+    }
         SimpleBroadcast::getInstance()->getScheduler()->scheduleRepeatingTask(new BroadcastScheduler(), $interval * 20);
       }
     } else
