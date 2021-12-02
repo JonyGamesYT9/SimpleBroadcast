@@ -1,13 +1,13 @@
 <div align="center">
-<h1>SimpleBroadcast | v4.0.0<h1>
-<p>Automatic message system for PocketMine-MP, written in PHP-7.4 and only supports PocketMine-MP 3.0.0</p>
+<h1>SimpleBroadcast | v5.0.0<h1>
+<p>Automatic message system for PocketMine-MP, written in PHP-8 and only supports PocketMine-MP 4.0.0</p>
 </div>
 
 <h3>Features:</h3>
 <ul>
 <li>Unlimited Messages</li>
 <li>Add variables to messages</li>
-<li>PocketMine-MP 3.0.0 (Only)</li>
+<li>PocketMine-MP 4.0.0 (Only)</li>
 </ul>
 
 <h3>Icon:</h3>
@@ -16,4 +16,4 @@
 ## Project information:
 | Version | Pocketmine API | PHP | Status |
 |---|---|---|---|
-| 4.0.0 | 3.0.0 | 7.4 | Verified |
+| 5.0.0 | 4.0.0 | 8 | Verified |
