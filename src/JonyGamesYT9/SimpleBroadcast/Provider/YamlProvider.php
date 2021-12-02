@@ -16,10 +16,10 @@ class YamlProvider
   private static YamlProvider $instance;
 
   /** @var Config $config */
-  private Config $config;
+  public Config $config;
 
   /** @var array $messages */
-  private array $messages = [];
+  public array $messages = [];
 
   /**
   * @return void
