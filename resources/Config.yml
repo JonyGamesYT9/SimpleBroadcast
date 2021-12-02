@@ -1,6 +1,6 @@
 ---
 # ========================================
-config-version: 4 # ¡Don't Change This!
+config-version: 5 # ¡Don't Change This!
 # ========================================
 # Permissions:
 # /broadcast send = broadcast.command.send
@@ -20,9 +20,6 @@ messages:
 - "§7Playing now in server: §6{online}"
 - "§7Your money on the server is: §6{money}"
 - "§7This is what your nickname would look like: §l§6RANK1 §r§f{name}§7, if you bought rank Rank1."
-- "§7Suscribe to §6YoSoyJony §7:D"
 - "§7Follow on §6https://github.com/JonyGamesYT9"
-- "§7Buy a rank in: §6shop.latammc.cf"
-- "§7Thanks for playing in: §6Latam.cf:19132"
 # ========================================
 ...
