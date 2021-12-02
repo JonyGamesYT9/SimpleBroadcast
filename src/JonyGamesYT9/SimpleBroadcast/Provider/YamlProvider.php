@@ -13,13 +13,13 @@ class YamlProvider
 {
 
   /** @var YamlProvider $instance */
-  private static $instance;
+  private static YamlProvider $instance;
 
   /** @var Config $config */
-  private $config;
+  private Config $config;
 
   /** @var array|string $messages */
-  private $messages = [];
+  private array $messages = [];
 
   /**
   * @return void
@@ -60,9 +60,6 @@ class YamlProvider
   */
   public function getMessages(): array
   {
-    foreach (YamlProvider::getInstance()->config->get("messages") as $messages) {
-      YamlProvider::getInstance()->messages[] = $messages;
-    }
     return YamlProvider::getInstance()->messages;
   }
 
