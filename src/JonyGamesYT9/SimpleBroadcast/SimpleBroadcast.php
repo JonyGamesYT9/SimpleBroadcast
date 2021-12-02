@@ -6,7 +6,7 @@ use JonyGamesYT9\SimpleBroadcast\Commands\BroadcastCommand;
 use JonyGamesYT9\SimpleBroadcast\Provider\YamlProvider;
 use JonyGamesYT9\SimpleBroadcast\Scheduler\BroadcastScheduler;
 use pocketmine\Server;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use onebone\economyapi\EconomyAPI;
 use function is_numeric;
 
@@ -18,7 +18,7 @@ class SimpleBroadcast extends \pocketmine\plugin\PluginBase
 {
 
   /** @var SimpleBroadcast $instance */
-  private static $instance;
+  private static SimpleBroadcast $instance;
 
   /**
   * @return void
@@ -39,7 +39,7 @@ class SimpleBroadcast extends \pocketmine\plugin\PluginBase
     }
     SimpleBroadcast::getInstance()->saveResource("Config.yml");
     $version = YamlProvider::getInstance()->getConfigVersion();
-    if ($version === 2) {
+    if ($version === 5) {
       Server::getInstance()->getCommandMap()->register("simplebroadcast", new BroadcastCommand($this));
       $interval = YamlProvider::getInstance()->getMessageInterval();
       if (!is_numeric($interval) || empty($interval)) {
