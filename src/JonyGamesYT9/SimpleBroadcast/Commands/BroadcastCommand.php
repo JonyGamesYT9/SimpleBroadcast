@@ -17,7 +17,7 @@ use function str_repeat;
 class BroadcastCommand extends Base implements PluginIdentifiableCommand {
 
   /** @var SimpleBroadcast $plugin */
-  private $plugin;
+  private SimpleBroadcast $plugin;
 
   /**
   * BroadcastCommand Constructor.
@@ -54,7 +54,7 @@ class BroadcastCommand extends Base implements PluginIdentifiableCommand {
         }
         break;
       case "author":
-        $sender->sendMessage("§l§7SimpleBroadcast | §r§fv1.0.0");
+        $sender->sendMessage("§l§7SimpleBroadcast | §r§fv5.0.0");
         $sender->sendMessage("§7Author: §6JonyGamesYT9");
         $sender->sendMessage("§7Twitter: §6@JonySeGur");
         $sender->sendMessage("§7Github: §6JonyGamesYT9");
