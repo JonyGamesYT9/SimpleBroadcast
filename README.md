@@ -1,5 +1,5 @@
 <div align="center">
-<h1>SimpleBroadcast | v5.0.0<h1>
+<h1>SimpleBroadcast | v6.0.0<h1>
 <p>Automatic message system for PocketMine-MP, written in PHP-8 and only supports PocketMine-MP 4.0.0</p>
 </div>
 
@@ -16,4 +16,4 @@
 ## Project information:
 | Version | Pocketmine API | PHP | Status |
 |---|---|---|---|
-| 5.0.0 | 4.0.0 | 8 | Verified |
+| 6.0.0 | 4.0.0 | 8 | Verified |
