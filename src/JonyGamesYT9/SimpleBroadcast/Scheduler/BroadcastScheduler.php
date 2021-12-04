@@ -14,9 +14,11 @@ use function array_rand;
 * Class BroadcastScheduler
 * @package JonyGamesYT9\SimpleBroadcast\Scheduler
 */
-class BroadcastScheduler extends \pocketmine\scheduler\Task {
+class BroadcastScheduler extends \pocketmine\scheduler\Task
+{
 
   /**
+   * @return void
   */
   public function onRun(): void
   {
