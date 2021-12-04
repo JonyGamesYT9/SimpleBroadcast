@@ -6,7 +6,6 @@ use JonyGamesYT9\SimpleBroadcast\Provider\YamlProvider;
 use JonyGamesYT9\SimpleBroadcast\SimpleBroadcast;
 use pocketmine\command\Command as Base;
 use pocketmine\command\CommandSender as Sender;
-use pocketmine\command\PluginIdentifiableCommand;
 use function str_replace;
 use function str_repeat;
 
@@ -14,7 +13,8 @@ use function str_repeat;
 * Class BroadcastCommand
 * @package JonyGamesYT9\SimpleBroadcast\Commands
 */
-class BroadcastCommand extends Base implements PluginIdentifiableCommand {
+class BroadcastCommand extends Base
+{
 
   /** @var SimpleBroadcast $plugin */
   private SimpleBroadcast $plugin;
