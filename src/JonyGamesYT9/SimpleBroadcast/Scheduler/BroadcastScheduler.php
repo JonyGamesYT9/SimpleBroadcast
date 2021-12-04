@@ -28,8 +28,7 @@ class BroadcastScheduler extends \pocketmine\scheduler\Task
     $online = count(Server::getInstance()->getOnlinePlayers());
     foreach (Server::getInstance()->getOnlinePlayers() as $players) {
       if ($players instanceof Player) {
-        $money = SimpleBroadcast::getInstance()->getPlayerMoney($players);
-        $selected_message = str_replace(["&", "{online}", "{name}", "{money}"], ["§", $online, $players->getName(), $money], $random);
+        $selected_message = str_replace(["&", "{online}", "{name}"], ["§", $online, $players->getName()], $random);
         $players->sendMessage(str_replace(["&"], ["§"], $title) . " " . $selected_message);
       }
     }
