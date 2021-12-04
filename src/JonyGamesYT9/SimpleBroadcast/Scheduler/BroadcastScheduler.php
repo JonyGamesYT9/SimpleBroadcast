@@ -18,7 +18,7 @@ class BroadcastScheduler extends \pocketmine\scheduler\Task {
 
   /**
   */
-  public function onRun()
+  public function onRun(): void
   {
     $messages = YamlProvider::getInstance()->getMessages();
     $random = $messages[array_rand($messages)];
