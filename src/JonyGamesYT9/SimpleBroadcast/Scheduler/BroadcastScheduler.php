@@ -17,9 +17,9 @@ use function array_rand;
 class BroadcastScheduler extends \pocketmine\scheduler\Task {
 
   /**
-  * @param int $tick
   */
-  public function onRun(int $tick) {
+  public function onRun()
+  {
     $messages = YamlProvider::getInstance()->getMessages();
     $random = $messages[array_rand($messages)];
     $title = YamlProvider::getInstance()->getPrefix();
