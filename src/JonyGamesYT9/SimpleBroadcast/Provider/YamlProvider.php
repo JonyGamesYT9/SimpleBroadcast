@@ -56,7 +56,7 @@ class YamlProvider
   }
 
   /**
-  * @return string
+  * @return array
   */
   public function getMessages(): array
   {
