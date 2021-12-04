@@ -7,7 +7,6 @@ use JonyGamesYT9\SimpleBroadcast\Provider\YamlProvider;
 use JonyGamesYT9\SimpleBroadcast\Scheduler\BroadcastScheduler;
 use pocketmine\Server;
 use pocketmine\player\Player;
-use onebone\economyapi\EconomyAPI;
 use function is_numeric;
 
 /**
@@ -34,9 +33,6 @@ class SimpleBroadcast extends \pocketmine\plugin\PluginBase
   */
   public function onEnable(): void
   {
-    if (Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI") === null) {
-      SimpleBroadcast::getInstance()->getLogger()->error("SimpleBroadcast: You need the EconomyAPI plugin for the plugin to work properly. But calm there will be no mistakes");
-    }
     SimpleBroadcast::getInstance()->saveResource("Config.yml");
     $version = YamlProvider::getInstance()->getConfigVersion();
     if ($version === 5) {
@@ -66,18 +62,4 @@ class SimpleBroadcast extends \pocketmine\plugin\PluginBase
   {
     return SimpleBroadcast::$instance;
   }
-  
-  /**
-   * @param Player $pl 
-   * @return int
-   */
-  public function getPlayerMoney(Player $pl): int
-  {
-		$economyAPI = Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI");
-		if ($economyAPI instanceof EconomyAPI) {
-			return $economyAPI->myMoney($pl);
-		} else {
-			return 0;
-		}
-	}
 }
