@@ -18,14 +18,10 @@ use function str_repeat;
 class BroadcastCommand extends Base implements PluginOwned
 {
 
-  /** @var SimpleBroadcast $plugin */
-  private SimpleBroadcast $plugin;
-
   /**
   * BroadcastCommand Constructor.
   */
   public function __construct(SimpleBroadcast $plugin) {
-    $this->plugin = $plugin;
     parent::__construct("broadcast", "Broadcast System By: JonyGamesYT9", null, []);
   }
 
@@ -86,6 +82,6 @@ class BroadcastCommand extends Base implements PluginOwned
   */
   public function getOwningPlugin(): Plugin
   {
-    return $this->plugin;
+    return SimpleBroadcast::getInstance();
   }
 }
