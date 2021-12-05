@@ -82,7 +82,7 @@ class BroadcastCommand extends Base implements PluginOwned
   }
 
   /**
-  * @return SimpleBroadcast
+  * @return Plugin
   */
   public function getOwningPlugin(): Plugin
   {
