@@ -17,11 +17,16 @@ use function str_repeat;
 */
 class BroadcastCommand extends Base implements PluginOwned
 {
+ 
+ /** @var SimpleBroadcast $plugin */ 
+  private SimpleBroadcast $plugin;
 
   /**
   * BroadcastCommand Constructor.
+  * @param SimpleBroadcast $plugin
   */
   public function __construct(SimpleBroadcast $plugin) {
+    $this->plugin = $plugin;
     parent::__construct("broadcast", "Broadcast System By: JonyGamesYT9", null, []);
   }
 
@@ -63,7 +68,7 @@ class BroadcastCommand extends Base implements PluginOwned
             $sender->sendMessage("§l§7SimpleBroadcast | §r§fYou must enter a text.");
             return;
           }
-          foreach ($this->getOwningPlugin()->getServer()->getOnlinePlayers() as $players) {
+          foreach ($this->getPlugin()->getServer()->getOnlinePlayers() as $players) {
             unset($args[0]);
             $title = YamlProvider::getInstance()->getPrefix();
             $message = str_replace(["&"], ["§"], implode(" ", $args));
@@ -75,6 +80,14 @@ class BroadcastCommand extends Base implements PluginOwned
         $sender->sendMessage("§l§7SimpleBroadcast | §r§fFor more help use /broadcast help");
         break;
     }
+  }
+  
+  /**
+   * @return SimpleBroadcast
+   */
+  public function getPlugin(): SimpleBroadcast
+  {
+    return $this->plugin;
   }
 
   /**
