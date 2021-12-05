@@ -67,7 +67,7 @@ class BroadcastCommand extends Base implements PluginOwned
             $sender->sendMessage("§l§7SimpleBroadcast | §r§fYou must enter a text.");
             return;
           }
-          foreach ($this->getPlugin()->getServer()->getOnlinePlayers() as $players) {
+          foreach ($this->getOwningPlugin()->getServer()->getOnlinePlayers() as $players) {
             unset($args[0]);
             $title = YamlProvider::getInstance()->getPrefix();
             $message = str_replace(["&"], ["§"], implode(" ", $args));
