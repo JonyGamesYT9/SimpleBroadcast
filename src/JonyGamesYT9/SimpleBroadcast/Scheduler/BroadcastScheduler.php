@@ -3,7 +3,7 @@
 namespace JonyGamesYT9\SimpleBroadcast\Scheduler;
 
 use JonyGamesYT9\SimpleBroadcast\Provider\YamlProvider;
-use JonyGamesYT9\SimpleBroadcast\SimpleBroadcast;
+use pocketmine\scheduler\Task;
 use pocketmine\Server;
 use pocketmine\player\Player;
 use function count;
@@ -14,7 +14,7 @@ use function array_rand;
 * Class BroadcastScheduler
 * @package JonyGamesYT9\SimpleBroadcast\Scheduler
 */
-class BroadcastScheduler extends \pocketmine\scheduler\Task
+class BroadcastScheduler extends Task
 {
 
   /**

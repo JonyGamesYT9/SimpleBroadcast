@@ -6,6 +6,7 @@ use JonyGamesYT9\SimpleBroadcast\Provider\YamlProvider;
 use JonyGamesYT9\SimpleBroadcast\SimpleBroadcast;
 use pocketmine\command\Command as Base;
 use pocketmine\command\CommandSender as Sender;
+use pocketmine\permission\DefaultPermissions;
 use pocketmine\plugin\PluginOwned;
 use pocketmine\plugin\Plugin;
 use function str_replace;
@@ -27,7 +28,8 @@ class BroadcastCommand extends Base implements PluginOwned
   */
   public function __construct(SimpleBroadcast $plugin) {
     $this->plugin = $plugin;
-    parent::__construct("broadcast", "Broadcast System By: JonyGamesYT9", null, []);
+    parent::__construct("broadcast", "Broadcast System By: JonyGamesYT9");
+    $this->setPermission(DefaultPermissions::ROOT_USER);
   }
 
   /**
@@ -36,7 +38,7 @@ class BroadcastCommand extends Base implements PluginOwned
   * @param array $args
   * @return mixed|void
   */
-  public function execute(Sender $sender, string $label, array $args) {
+  public function execute(Sender $sender, string $label, array $args): void {
     if (empty($args[0])) {
       $sender->sendMessage("§l§7SimpleBroadcast | §r§fFor more help use /broadcast help");
       return;
@@ -57,9 +59,8 @@ class BroadcastCommand extends Base implements PluginOwned
         }
         break;
       case "author":
-        $sender->sendMessage("§l§7SimpleBroadcast | §r§fv5.0.0");
+        $sender->sendMessage("§l§7SimpleBroadcast | §r§fv7.0.0");
         $sender->sendMessage("§7Author: §6JonyGamesYT9");
-        $sender->sendMessage("§7Twitter: §6@JonySeGur");
         $sender->sendMessage("§7Github: §6JonyGamesYT9");
         break;
       case "send":

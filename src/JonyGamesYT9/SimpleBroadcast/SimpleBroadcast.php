@@ -35,7 +35,7 @@ class SimpleBroadcast extends \pocketmine\plugin\PluginBase
   {
     SimpleBroadcast::getInstance()->saveResource("Config.yml");
     $version = YamlProvider::getInstance()->getConfigVersion();
-    if ($version === 5) {
+    if ($version === 7) {
       Server::getInstance()->getCommandMap()->register("simplebroadcast", new BroadcastCommand($this));
       $interval = YamlProvider::getInstance()->getMessageInterval();
       if (!is_numeric($interval) || empty($interval)) {
